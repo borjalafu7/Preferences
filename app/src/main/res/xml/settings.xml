@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <PreferenceCategory
+        android:key="categoria1"
+        android:title="Primera categoría">
+
+        <SwitchPreferenceCompat
+            app:key="Notificaciones"
+            app:title="Activar Notificaciones" />
+
+        <Preference
+            app:key="feedback"
+            app:title="Send feedback"
+            app:summary="Report technical issues or suggest new features"/>
+    </PreferenceCategory>
+    <PreferenceCategory
+        android:key="categoria2"
+        android:title="Segunda categoría">
+
+
+        <ListPreference
+            android:defaultValue="1"
+            android:entries="@array/pais"
+            android:entryValues="@array/codigopais"
+            android:key="list_preference_1"
+            android:title="Elige País" />
+        <EditTextPreference
+            android:defaultValue="Default value"
+            android:key="edit_text_preference_1"
+            android:selectAllOnFocus="true"
+            android:singleLine="true"
+            android:title="Edit text preference" />
+        <Preference
+            app:key="activity"
+            app:title="Ir actividad 2">
+            <intent
+                android:targetPackage="com.bolapa.preferences"
+                android:targetClass="com.bolapa.preferences.MainActivity2"/>
+        </Preference>
+    </PreferenceCategory>
+
+</PreferenceScreen>
